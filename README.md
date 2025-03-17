@@ -17,17 +17,13 @@ W. Cukierski, “Histopathologic cancer detection,” https://kaggle.com/competi
 
 - Initially by steps per epoch and validation steps were off.  This created volitility in the accuracy and loss.  To keep the notebook a reasonable size, I discarded those models, but below are screenshots of the acuracy and loss plots.
 
-<img src="plot1.png" style="width:22%">
-<img src="plot2.png" style="width:22%">
-<img src="plot3.png" style="width:22%">
-<img src="plot4.png" style="width:22%">
+<img src="Plot1.png" style="width:24%"><img src="Plot2.png" style="width:24%"><img src="Plot3.png" style="width:24%"><img src="Plot4.png" style="width:24%">
 
 - To increase performance of all models, I would include the validation set (made out of training data) in the training.
 - When I switched to run the models using GPUs, the results changed drastically.  I'm curious as to why that would be.
 - VGG16 seemed too big of a model to train, and led to overfitting. Using a learning rate decay didn't seem to help the issue. Here were the accuracy and loss by epoch using learning rate decay, but starting with lr=0.001:
 
-<img src="VGGof1.png" style="width:45%">
-<img src="VGGof2.png" style="width:45%">
+<img src="VGGof1.png" style="width:45%"><img src="VGGof2.png" style="width:45%">
 
 it didn't improve even with a drastic lowering of learning rate. This model performed considerably worse on training set, even after changing hyper-paramers multiple times, so I didn't submit it to kaggle.
 
